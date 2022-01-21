@@ -54,7 +54,6 @@ while not game_over:
     print(f'{game_lingo}')
     user_hand = []
     computer_hand = []
-    bust = False
     
     for _ in range(2):
         deal_card(user_hand)
