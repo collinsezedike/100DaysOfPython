@@ -25,13 +25,13 @@ my_function()
 
 # 2. Reproduce the bug
 from random import randint
-dice_imgs = ['1', '2', '3', '4', '5', '6']      # get the right emoji
+dice_imgs = ["❶", "❷", "❸", "❹", "❺", "❻"]      # get the right emoji
 dice_num = randint(1,6)
 print(dice_imgs[dice_num])
 
 #reproducing the bug:
 from random import randint
-dice_imgs = ['1', '2', '3', '4', '5', '6']      # get the right emoji
+dice_imgs = ["❶", "❷", "❸", "❹", "❺", "❻"]      # get the right emoji
 # dice_num = 6
 # print(dice_imgs[dice_num])
 
@@ -43,7 +43,7 @@ dice_imgs = ['1', '2', '3', '4', '5', '6']      # get the right emoji
 # Solution:
 # Change the bounds of the randint function to 0 and 5
 from random import randint
-dice_imgs = ['1', '2', '3', '4', '5', '6']      # get the right emoji
+dice_imgs = ["❶", "❷", "❸", "❹", "❺", "❻"]      # get the right emoji
 dice_num = randint(0,5)
 print(dice_imgs[dice_num])
 
