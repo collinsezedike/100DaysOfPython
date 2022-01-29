@@ -1,4 +1,4 @@
-from turtle import Turtle, Screen, width
+from turtle import Turtle, Screen
 import random
 
 turtle_colours = ['red', 'orange', 'yellow', 'green', 'blue', 'purple']
