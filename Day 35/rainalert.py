@@ -6,7 +6,11 @@ API_KEY = "4d98863abc9a025d03bd24075f4fe41c"
 MY_LAT = 6.524379
 MY_LONG = 3.379206
 ACCOUNT_SID = "ACc1e2751824a0a89117cc706d64779979"
-AUTH_TOKEN = "ce91010da40ddbc4241ea511087ded0e"
+AUTH_TOKEN = "ce91010da40ddbc4241ea511087ded0e"    
+# This Auth Token was automatically revoked by twilio 
+# because their servers caught it on GitHub and 
+# they assume that my details have been compromised in some way.
+# I'm impressed. 
 
 test_lat = -15.826691
 test_long = -47.921822
