@@ -7,17 +7,15 @@ MY_LAT = 6.524379
 MY_LONG = 3.379206
 ACCOUNT_SID = "ACc1e2751824a0a89117cc706d64779979"
 AUTH_TOKEN = "ce91010da40ddbc4241ea511087ded0e"    
+
 # This Auth Token was automatically revoked by twilio 
 # because their servers caught it on GitHub and 
-# they assume that my details have been compromised in some way.
+# they assumed that my details have been compromised in some way.
 # I'm impressed. 
 
-test_lat = -15.826691
-test_long = -47.921822
-
 parameters = {
-    "lat": test_lat,
-    "lon": test_long,
+    "lat": MY_LAT,
+    "lon": MY_LONG,
     "exclude": ["current", "minutely", "daily"],
     "appid": API_KEY,
 }
@@ -43,9 +41,9 @@ if will_rain:
     client = Client(ACCOUNT_SID, AUTH_TOKEN)
 
     message = client.messages.create(
-        body="\n\nIt's going to 🌧️ today. Remember to bring an ☂️.",
-        from_='+18454098748',
-        to='+2348129841904'
+        body="It's going to 🌧️ today. Remember to bring an ☂️.",
+        from_='sender number',
+        to='recipient number'
     )
 
     print(message.status)
