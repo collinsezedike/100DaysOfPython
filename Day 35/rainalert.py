@@ -9,8 +9,8 @@ ACCOUNT_SID = "ACc1e2751824a0a89117cc706d64779979"
 AUTH_TOKEN = "ce91010da40ddbc4241ea511087ded0e"    
 
 # This Auth Token was automatically revoked by twilio 
-# because their servers caught it on GitHub and 
-# they assumed that my details have been compromised in some way.
+# because their servers caught it on GitHub.
+# So, they assumed that my details have been compromised in some way.
 # I'm impressed. 
 
 parameters = {
