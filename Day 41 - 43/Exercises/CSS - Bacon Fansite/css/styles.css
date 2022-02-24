@@ -1,0 +1,28 @@
+h1 {
+    color: red;
+    font-size: 100px;
+}
+
+/* id */
+#heading {
+    color: blue;
+}
+
+/* Classes */
+.bacon {
+    background-color: green;
+    height: 120px;
+}
+.broccoli {
+    background-color: red;
+}
+
+/* Multiple classes */
+.circular {
+    border-radius: 100%;
+}
+
+/* Pseudo classes */
+img:hover {
+    background-color: gold;
+}
