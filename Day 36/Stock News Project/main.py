@@ -93,7 +93,7 @@ def get_stock_prices():
     yesterday_closing_price = float(data["Time Series (Daily)"][test_yesterday]["4. close"])
     day_before_yesterday_closing_price = float(data["Time Series (Daily)"][test_day_before_yesterday]["4. close"])
 
-    # angela's
+    # angela's code
     # data = response.json()["Time Series (Daily)"]
     # # convert the response data to a list so that it can data can be fetched via indices
     # data_list = [value for (key, value) in data.items()]
