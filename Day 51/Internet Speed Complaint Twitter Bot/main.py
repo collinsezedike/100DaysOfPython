@@ -7,6 +7,7 @@ chrome_driver_path = "../../chromedriver.exe"
 service_obj = Service(chrome_driver_path)
 
 SUPPOSED_SPEED = 200
+INTERNET_PROVIDER = "MTNNG"
 
 
 class InternetSpeedTwitterBot:
@@ -49,7 +50,7 @@ class InternetSpeedTwitterBot:
         time.sleep(25)
         tweet_textarea = self.driver.find_element(By.CLASS_NAME, value="public-DraftStyleDefault-block")
         tweet_textarea.click()
-        tweet_textarea.send_keys(f"Hey @MTNNG, why is my internet speed {self.download_speed}down/{self.upload_speed}"
+        tweet_textarea.send_keys(f"Hey @{INTERNET_PROVIDER}, why is my internet speed {self.download_speed}down/{self.upload_speed}"
                                  f"up when I pay for {SUPPOSED_SPEED}Mbps?")
         time.sleep(2)
         self.driver.find_element(By.XPATH, value='//*[@id="react-root"]/div/div/div[2]/main/div/div/div/div/div/div[2]/div/div[2]/div[1]/div/div/div/div[2]/div[3]/div/div/div[2]/div/div/span/span').click()
