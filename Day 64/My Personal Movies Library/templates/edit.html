@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% import "bootstrap/form.html" as wtf %}
+
+{% block title %}Edit Movies{% endblock %}
+
+{% block content %}
+<div class="content">
+  <h1 class="heading">{{ movie.title }} </h1>
+    <p class="description">Edit Movie Rating</p>
+    <form method="post" action="{{ url_for('edit_rating_and_review')}}">
+      <input type="hidden" name="id" value="{{ movie.id }}">
+      {{ wtf.render_form(form, novalidate=True) }}
+    </form>
+  </div>
+{% endblock %}
