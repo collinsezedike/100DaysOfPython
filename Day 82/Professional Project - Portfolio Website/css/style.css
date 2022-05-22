@@ -1,0 +1,89 @@
+body {
+    text-align: center;
+    background-color: #F1F1F1;
+    font-family: 'Open Sans', sans-serif;
+}
+h1 {
+    font-family: 'Playfair Display', serif;
+}
+
+
+
+
+.content {
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+
+
+
+/* Navbar */
+.navbar {
+    padding: 4.5rem 4.5rem 4.5rem 2rem;
+}
+.nav-item {
+    padding: 0 1rem;
+}
+.navbar .navbar-nav .nav-link:hover{
+    color: #21209C;
+}
+
+
+
+
+/* Projects page */
+.project-card {
+    width: 18rem;
+    padding: 3%;
+    transition: all 1s ease;
+    filter: blur(5px);
+}
+
+.project-card:hover {
+    filter: blur(0px);
+}
+
+.project-link {
+    text-decoration: none;
+}
+
+.card-text {
+    color: #222;
+}
+
+.card-text:hover {
+    color: #21209C;
+}
+
+
+
+/* Contact page */
+.btn {
+    margin: 2rem;
+    border: 0.01rem solid #222;
+    border-radius: 50px;
+}
+.btn:hover {
+    padding: 7px 2em;
+    background-color: #21209C;
+    color: white;
+    border: none;
+}
+
+.social > .fa-circle {
+    color: #222;
+}
+.social:hover > .fa-circle {
+    color: #21209C;
+}
+
+
+@media screen and (max-width:1000px){
+    .project-card {
+        filter: blur(0px);
+    }
+}
