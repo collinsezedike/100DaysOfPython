@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}Cafes and Wifi{% endblock %}
+{% block navlink1 %}<a class="nav-link" href="{{ url_for('new_cafe')}}">Add cafe</a>{% endblock navlink1 %} 
+{% block content %}
+<h1>Cafes and Wifi</h1>
+<p>Find the best cafes in London</p>
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+    {% for message in messages %}
+        <p style="color: green; font-style: italic; padding-left: 0.5rem;">{{ message }}</p>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+<div class="container-fluid">
+  <div class="row">
+    {% for cafe in cafes %}
+    <div class="cafe-card col-lg-4 col-md-6">
+      <div class="card">
+          <a href="{{ url_for('show_cafe', cafe_id=cafe.id) }}">
+            <img src="{{ cafe.img_url }}" alt="cafe image" class="card-img" />
+          </a>
+          <div class="cafe-card-text">
+            <h2 style="color: #470d21">{{ cafe.name }}</h2>
+            <p><a href="{{ cafe.map_url }}" target="blank">Location: {{ cafe.location }}</a></p>
+            <p>Socket availability: {{ cafe.has_sockets | replace("True", "Yes") | replace("False", "No") }}</p>
+            <p>Has toilets: {{ cafe.has_toilet | replace("True", "Yes") | replace("False", "No") }}</p>
+            <p>Has wifi: {{ cafe.has_wifi | replace("True", "Yes") | replace("False", "No") }}</p>
+            <p>Can take calls: {{ cafe.can_take_calls | replace("True", "Yes") | replace("False", "No") }}</p>
+            <p>Seats: {{ cafe.seats }}</p>
+            <p>Coffee price: {{ cafe.coffee_price }}</p>
+          </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

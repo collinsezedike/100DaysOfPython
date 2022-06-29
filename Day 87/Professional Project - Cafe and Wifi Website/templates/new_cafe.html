@@ -1,0 +1,10 @@
+{% import "bootstrap/form.html" as wtf %}
+{% extends "base.html" %}
+{% block title %}Add a new cafe{% endblock %}
+{% block navlink1 %}<a class="nav-link" href="{{ url_for('home')}}">Home</a>{% endblock navlink1 %}
+{% block content %}
+    <h1>Add a new cafe</h1>
+    <div class="cafe-form">
+        {{ wtf.render_form(form, method="post", novalidate=True) }}
+    </div>
+{% endblock content %}

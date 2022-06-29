@@ -1,0 +1,141 @@
+body {
+    background-color: #F9E4D4;
+    text-align: center;
+    color: #470D21;
+}
+h1, h2 {
+    font-family: 'DM Serif Display', serif;
+}
+a {
+    color: #470D21;
+    text-decoration: none;
+}
+a:hover {
+    color: #F9E4D4;
+}
+td {
+    padding-left: 1rem;
+    text-align: left;
+    border: none;
+}
+table {
+    line-height: 0;
+}
+input, .form-check {
+    margin: 0 0 1rem;
+}
+.btn { 
+    margin-top: 1rem;
+}
+.btn-primary {
+    background-color: #470D21;
+    border: none;
+    padding: 0.5rem 2rem;
+    outline: 0;
+}
+.btn-primary:hover {
+    background-color: tan;
+    color: #470D21;
+}
+.btn-secondary {
+    background-color: transparent;
+    color: #470D21;
+    border: #470D21 1px solid;
+    padding: 0.5rem 2rem;
+}
+.btn-secondary:hover {
+    background-color: white;
+    color: #470D21;
+    border: none;
+}
+
+
+
+.navbar {
+    padding: 4.5rem 4.5rem 4.5rem 2rem;
+}
+.nav-item {
+    padding: 0 1rem;
+}
+.navbar .navbar-nav .nav-link:hover{
+    color: #470D21;
+}
+
+
+
+
+.card {
+    background-color: tan;
+    padding: 1rem;
+    margin: 1rem auto;
+    width: 70%;
+}
+.card-img {
+    width: 100%;
+    height: 13rem;
+}
+.cafe-card {
+    margin: auto;
+}
+.cafe-card-text {
+    margin: 1rem 0 0;
+    line-height: 1rem;
+    text-align: left;
+}
+
+
+
+
+.cafe-form {
+    width: 50%;
+    margin: auto;
+    text-align: left;
+    padding: 1rem;
+}
+
+
+
+
+.cafe-page-table {
+    width: 70%;
+    margin: auto;
+}
+.cafe-page-img {
+    width: 100%;
+    height: 50%;
+    margin: 1rem auto 2rem;
+}
+.cafe-page-link {
+    color: inherit;
+}
+.cafe-page-link:hover {
+    color: #470D21;
+}
+.cafe-page-buttons-div {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    display: table;
+}
+.cafe-page-buttons-div .btn{
+    margin: 1rem;
+}
+
+
+.social-icon {
+    padding: 0.5rem;
+    color: #F9E4D4;;
+}
+.social-icon:hover {
+    color: tan;
+}
+
+
+
+
+.footer-div {
+    background-color: #470D21;
+    color: #F9E4D4;
+    padding: 5rem;
+    margin-top: 3rem;
+}
