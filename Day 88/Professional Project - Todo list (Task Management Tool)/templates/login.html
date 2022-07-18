@@ -1,0 +1,19 @@
+{% import "bootstrap5/form.html" as wtf %}
+{% extends "base.html" %}
+{% block title %}Sign into your Feenee account{% endblock %}
+{% block navlink1 %}<a class="nav-link" href="{{ url_for('home')}}">Home</a>{% endblock navlink1 %}
+{% block navlink2 %}<a class="nav-link" href="{{ url_for('about')}}">About</a>{% endblock navlink2 %}
+{% block content %}
+<h1>Log in to set today's task</h1>
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for message in messages %}
+            <i style="color:rgb(209, 0, 0);">{{ message }}</i>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+<div class="form-div">
+    {{ wtf.render_form(form, novalidate=True, method="post")}}
+    <i>Don't have an account? <a href="{{ url_for('register') }}" id="register-link">Create one now!</a></i>
+</div>
+{% endblock %}

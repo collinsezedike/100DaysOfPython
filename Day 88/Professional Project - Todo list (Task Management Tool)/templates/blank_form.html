@@ -1,0 +1,18 @@
+{% import "bootstrap5/form.html" as wtf %}
+{% extends "base.html" %}
+{% block title %} Dashboard {% endblock %}
+{% block navlink1 %}<a class="nav-link" href="{{ url_for('logout')}}">Log out</a>{% endblock navlink1 %}
+{% block content %}
+<div class="dashboard">
+    <div class="row">
+
+        <div class="col-lg-6 dashboard-col">
+            <div class="dashboard-div">
+                {{ wtf.render_form(form, novalidate=True, method="post") }}
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+{% endblock %}

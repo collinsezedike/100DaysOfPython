@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Feenee | Manage set tasks effortlessly{% endblock %}
+{% block navlink1 %}<a class="nav-link" href="{{ url_for('about')}}">About</a>{% endblock navlink1 %} 
+{% block navlink2 %}<a class="nav-link" href="{{ url_for('login')}}">Login</a>{% endblock navlink2 %} 
+{% block content %}
+<div class="container">
+    <div class="row header-div">
+        <div class="col-lg-6 header-text">
+            <h1>List. Cross. On to the next. </h1>
+            <p>Create simple to-do list for complex tasks. Feenee's simple interface makes task management easier than the tasks.</p>
+        </div>
+        <div class="col-lg-6">
+            <img src="{{ url_for('static', filename='img/header-illustration.svg')}}" class="header-illustration">
+        </div>
+        <div class="col-lg-1">
+            <a href="{{ url_for('register') }}" class="btn btn-primary text-nowrap">Sign up</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

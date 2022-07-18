@@ -1,0 +1,141 @@
+{% import "bootstrap5/form.html" as wtf %}
+{% extends "base.html" %}
+{% block title %} Dashboard {% endblock %}
+{% block navlink1 %}<a class="nav-link" href="{{ url_for('logout')}}">Log out</a>{% endblock navlink1 %}
+{% block content %}
+<h1>
+    Hi, {{ current_user.username.title() }}!
+</h1>
+<a class="inline-link" href="{{ url_for('edit_username') }}">Change username</a>
+<div class="dashboard">
+    <div class="row">
+
+        <div class="col-lg-6 dashboard-col">
+            <div class="dashboard-div tasks">
+                {% if tasks: %}
+                <p>Foremost</p>
+                <ul>
+                    {% if foremost_task: %}
+                    {% for task in foremost_task: %}
+                        <li>
+                            {% if task.is_done: %}
+                            <s>{{ task.task }}</s>
+                            {% else: %}
+                            {{ task.task }}
+                            {% endif %}
+
+                            <a class="inline-link" href="{{ url_for('edit_task', task_id=task.id) }}"><i class="fa-solid fa-pen"></i></a>
+                            <a class="inline-link" href="{{ url_for('delete_task', task_id=task.id) }}"><i class="fa-solid fa-trash"></i></a>
+
+                            {% if task.is_done: %}
+                            <a class="inline-link" href="{{ url_for('cross_task', task_id=task.id) }}"><i class="fa-solid fa-hourglass"></i></a>
+                            {% else: %}
+                            <a class="inline-link" href="{{ url_for('cross_task', task_id=task.id) }}"><i class="fa-solid fa-calendar-check"></i></a>
+                            {% endif %}
+                        </li>
+                        {% endfor %}
+                    {% else: %}
+                        <li>-- --</li>
+                    {% endif %}
+                    
+                </ul>
+                <p>Crucial</p>
+                <ul>
+                    {% if crucial_tasks: %}
+                        {% for task in crucial_tasks: %}
+                        <li>
+                            {% if task.is_done: %}
+                            <s>{{ task.task }}</s>
+                            {% else: %}
+                            {{ task.task }}
+                            {% endif %}
+
+                            <a class="inline-link" href="{{ url_for('edit_task', task_id=task.id) }}"><i class="fa-solid fa-pen"></i></a>
+                            <a class="inline-link" href="{{ url_for('delete_task', task_id=task.id) }}"><i class="fa-solid fa-trash"></i></a>
+
+                            {% if task.is_done: %}
+                            <a class="inline-link" href="{{ url_for('cross_task', task_id=task.id) }}"><i class="fa-solid fa-hourglass"></i></a>
+                            {% else: %}
+                            <a class="inline-link" href="{{ url_for('cross_task', task_id=task.id) }}"><i class="fa-solid fa-calendar-check"></i></a>
+                            {% endif %}
+                        </li>
+                        {% endfor %}
+                    {% else: %}
+                        <li>-- --</li>
+                    {% endif %}
+                </ul>
+                <p>Important</p>
+                <ul>
+                    {% if important_tasks: %}
+                        {% for task in important_tasks: %}
+                        <li>
+                            {% if task.is_done: %}
+                            <s>{{ task.task }}</s>
+                            {% else: %}
+                            {{ task.task }}
+                            {% endif %}
+
+                            <a class="inline-link" href="{{ url_for('edit_task', task_id=task.id) }}"><i class="fa-solid fa-pen"></i></a>
+                            <a class="inline-link" href="{{ url_for('delete_task', task_id=task.id) }}"><i class="fa-solid fa-trash"></i></a>
+
+                            {% if task.is_done: %}
+                            <a class="inline-link" href="{{ url_for('cross_task', task_id=task.id) }}"><i class="fa-solid fa-hourglass"></i></a>
+                            {% else: %}
+                            <a class="inline-link" href="{{ url_for('cross_task', task_id=task.id) }}"><i class="fa-solid fa-calendar-check"></i></a>
+                            {% endif %}
+                        </li>
+                        {% endfor %}
+                    {% else: %}
+                        <li>-- --</li>
+                    {% endif %}
+                </ul>
+                <p>Minor</p>
+                <ul>
+                    {% if minor_tasks: %}
+                        {% for task in minor_tasks: %}
+                        <li>
+                            {% if task.is_done: %}
+                            <s>{{ task.task }}</s>
+                            {% else: %}
+                            {{ task.task }}
+                            {% endif %}
+
+                            <a class="inline-link" href="{{ url_for('edit_task', task_id=task.id) }}"><i class="fa-solid fa-pen"></i></a>
+                            <a class="inline-link" href="{{ url_for('delete_task', task_id=task.id) }}"><i class="fa-solid fa-trash"></i></a>
+
+                            {% if task.is_done: %}
+                            <a class="inline-link" href="{{ url_for('cross_task', task_id=task.id) }}"><i class="fa-solid fa-hourglass"></i></a>
+                            {% else: %}
+                            <a class="inline-link" href="{{ url_for('cross_task', task_id=task.id) }}"><i class="fa-solid fa-calendar-check"></i></a>
+                            {% endif %}
+                        </li>
+                        {% endfor %}
+                    {% else: %}
+                        <li>-- --</li>
+                    {% endif %}
+                </ul>
+                
+                {% else: %}
+                <div style="text-align: center;">
+                    <h1>No tasks for today!</h1>  
+                </div>
+                {% endif %}
+
+                {% if not date_is_past: %}
+                <div style="text-align: center;">
+                    <a href="{{ url_for('add_task')}}" class="btn btn-primary text-nowrap">Add task</a>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="col-lg-6 dashboard-col">
+            <div class="dashboard-div">
+                <a href="{{ url_for('select_date')}}" class="btn btn-primary text-nowrap">Select date</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}What is Feenee?{% endblock %}
+{% block navlink1 %}<a class="nav-link" href="{{ url_for('home')}}">Home</a>{% endblock navlink1 %}
+{% block navlink2 %}<a class="nav-link" href="{{ url_for('login')}}">Login</a>{% endblock navlink2 %} 
+{% block content %}
+<div class="about-section">
+    <h1>Task management tool to help you get more done</h1>
+    <div class="about-copy">
+        <p>
+            Feenee is a simple app that allows you to easily set and complete your daily tasks. You can write down all your tasks on the app and look down at a certain date to see what you accomplished. Task management should not be as difficult as the task themselves. Feenee adopts a simple interface so you only have to worry about accomplishing your set goals. You will no longer need complex logic controls for setting milestones - just use it with ease!
+            <br><br>
+            Feenee is from the french word, <i style="color: #696eff;">fini</i> and is pronounced likewise.        
+        </p>
+    </div>
+    <div class="about-footer">
+        <p>Built with Flask by Collins Ezedike-egwom<br>
+        This website is one of my Professional projects for my #100DaysOfCode.</p>
+        <a href="https://twitter.com/collinsezedike" target="blank" class="social-icon">
+            <i class="fa-brands fa-twitter social-icon"></i>
+        </a>
+        <a href="https://github.com/collinsezedike" target="blank" class="social-icon">
+            <i class="fa-brands fa-github social-icon"></i>
+        </a>
+        <a href="https://instagram.com/collinsezedike" target="blank" class="social-icon">
+            <i class="fa-brands fa-instagram social-icon"></i>
+        </a>
+    </div>
+</div>
+{% endblock %}

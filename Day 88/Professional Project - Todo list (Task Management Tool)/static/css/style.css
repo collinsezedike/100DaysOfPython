@@ -1,0 +1,145 @@
+body {
+    background: linear-gradient(to bottom right, #696eff, #e4a7c5) fixed;
+    text-align: center;
+    color: white;
+}
+input {
+    margin: 0 0 1rem;
+}
+
+
+
+
+.navbar {
+    padding: 4.5rem 2.5rem 2.5rem 3rem;
+}
+.nav-item {
+    padding: 0 1rem;
+}
+.navbar-light .navbar-brand {
+    font-size: 2rem;
+    color: inherit;
+}
+.navbar-light .navbar-brand:hover {
+    color: inherit;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: inherit;
+}
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #696eff;
+}
+
+
+
+
+.btn { 
+    margin-top: 1rem;
+}
+.btn-primary {
+    background-color: #696eff;
+    border: none;
+    padding: 0.5rem 5.5rem;
+    font-size: large;
+}
+.btn-primary:hover {
+    background-color: #e4a7c5;
+}
+
+
+
+
+.header-div {
+    width: 90%;
+    margin: auto auto 5rem;
+}
+.header-text {
+    text-align: left;
+    margin: auto 0;
+}
+.header-text h1 {
+    font-size: 3rem;
+}
+.header-text p {
+    font-size: 1.3rem;
+    margin: 1.2rem 0 4rem;
+}
+.header-illustration{
+    width: 85%;
+    height: 85%;
+}
+
+
+
+
+.form-div {
+    width: 70%;
+    margin: 2rem auto 5rem;
+}
+#register-link, #login-link {
+    color: #696eff;
+    text-decoration: none;
+}
+#register-link:hover, #login-link:hover {
+    color: #e4a7c5;
+}
+
+
+
+.about-section {
+    width: 70%;
+    margin: auto;
+}
+.about-copy {
+    text-align: left;
+    color: #111;
+    background-color: #fefefe;
+    border-radius: 2rem;
+    padding: 1.5rem;
+    margin: 2rem 0;
+}
+.about-footer {
+    margin-bottom: 3rem;
+}
+.social-icon {
+    color: #696eff;
+    text-decoration: none;
+    font-size: larger;
+    padding: 0.2rem;
+}
+.social-icon:hover {
+    color: #e4a7c5;
+}
+
+
+
+
+
+.dashboard {
+    width: 90%;
+    margin: 5rem auto;
+    background-color: #fefefe;
+    border-radius: 5rem;
+    padding: 1rem;
+}
+.dashboard-col {
+    margin: auto; 
+    padding: 2rem;
+}
+.dashboard-div {
+    color: #111;
+    padding: 3rem;
+    border: #aaa 1px solid;
+    border-radius: 2rem;
+}
+.tasks {
+    text-align: left;
+}
+.inline-link {
+    color: #696eff;
+    text-decoration: none;
+    margin-left: 1rem;
+}
+.inline-link:hover {
+    color: #e4a7c5;
+}
