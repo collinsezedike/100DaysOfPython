@@ -110,7 +110,7 @@ window.geometry("800x600")
 window.config(bg=BACKGROUND, padx=100, pady=50)
 window.resizable(False, False)
 
-intro_label = Label(text="Write for 5 minsutes without stopping else,\nyou lose everything you have typed.")
+intro_label = Label(text="Write for 5 minutes without stopping else,\nyou lose everything you have typed.")
 intro_label.config(font=("consolas", 20, "bold"), bg=BACKGROUND, fg="white")
 intro_label.place(relx=0.5, rely=0.45, anchor=CENTER)
 
