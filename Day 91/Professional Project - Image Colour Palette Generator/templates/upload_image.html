@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %} Upload image {% endblock %}
+{% block navlink1 %}<a class="nav-link" href="{{ url_for('home') }}">Home</a>{% endblock navlink1 %}
+{% block navlink2 %}<a class="nav-link" href="{{ url_for('about') }}">About</a>{% endblock navlink2 %}
+{% block content %}
+<div class="container">
+    <div class="row header-div">
+        <div class="col-lg-6 header-img-div">
+            <img src="{{ url_for('static', filename='DoughnutxPalette.jpg') }}" alt="Palette Sample image" class="header-img">
+        </div>
+        <div class="col-lg-6">
+            <h2 class="header-text">Upload image</h2>
+            <p>NOTE: Image must be a <b>.jpg type</b> and <b>not more than 10MB</b></p>
+
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <i style="color:rgb(209, 0, 0);">{{ message }}</i>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}                
+            <form action="{{ url_for('recieve_image') }}" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <input name="image" class="form-control upload-input" type="file" accept=".jpg" >
+                </div>
+                
+                <div class="col-lg-1">
+                    <button class="btn btn-primary btn-lg header-cta text-nowrap" type="submit">Generate Palette</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

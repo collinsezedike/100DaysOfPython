@@ -1,0 +1,98 @@
+body {
+    background-color: white;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.navbar {
+    text-align: center;
+    margin: 3rem auto 2rem;
+    padding: 2rem;
+}
+.nav-item {
+    padding: 0 1rem;
+}
+.navbar-brand {
+    font-weight: 900 !important;
+}
+.nav-link:hover {
+    color: aqua !important;
+}
+
+
+.header-div {
+    margin: 2rem auto;
+    padding: 1rem;
+}
+.header-text {
+    font-weight: 900;
+    font-size: 4rem;
+}
+.header-img-div {
+    width: 110%;
+    height: 250%;
+}
+.header-img {
+    height: 100%;
+    width: 100%;
+    padding-left: 1rem;
+}
+.header-cta {
+    background-color: aqua !important;
+    color: black !important;
+    border: 0 !important;
+    padding: 1rem 3rem !important;
+    margin-top: 1rem;
+}
+
+
+.about-container {
+    height: 65vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.about-div {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding: 2rem;
+    border-right: 2px solid aqua ;
+    border-bottom: 2px solid aqua ;
+}
+.social-icon {
+    width: 2rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: black;
+}
+.social-icon:hover {
+    color: aqua;
+}
+
+
+.upload-input {
+    margin: 0rem auto 0.5rem;
+}
+
+
+.color-table {
+    text-align: center;
+}
+td {
+    width: 1%;
+}
+
+@media (max-width: 990px) {
+    .header-div {
+        text-align: center;
+    }
+    .header-img-div {
+        margin-bottom: 5rem;
+    }
+    .header-text {
+        font-size: 3rem;
+    }
+}

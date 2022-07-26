@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %} Your generated palette {% endblock %}
+{% block navlink1 %}<a class="nav-link" href="{{ url_for('home') }}">Home</a>{% endblock navlink1 %}
+{% block navlink2 %}<a class="nav-link" href="{{ url_for('about') }}">About</a>{% endblock navlink2 %}
+{% block content %}
+<div class="container">
+    <div class="row header-div">
+        <div class="col-lg-6 header-img-div">
+            <img src="{{ url_for('static', filename='upload/image.jpg') }}" alt="Uploaded image" class="header-img">
+        </div>
+        <div class="col-lg-6">
+            <h2 class="header-text">Colors</h2>   
+            <table class="table table-borderless table-sm color-table">
+                <tbody>
+                {% for color in session["colors"]: %}
+                  <tr class="color-row">
+                    <td class="color-box" style="background-color: {{ color }};"></td>
+                    <td class="color-name">{{ color.upper() }}</td>
+                  </tr>
+                {% endfor %} 
+                </tbody>
+            </table>  
+        </div>
+        <div class="col-lg-6">
+            <a class="btn btn-primary btn-lg header-cta text-nowrap" href="{{ url_for('recieve_image') }}">Try a different picture!</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

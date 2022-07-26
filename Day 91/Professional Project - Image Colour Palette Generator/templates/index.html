@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %} CanvasGen - Generate color paletts from images {% endblock %}
+{% block navlink1 %}<a class="nav-link" href="{{ url_for('about') }}">About</a>{% endblock navlink1 %}
+{% block content %}
+<div class="container">
+    <div class="row header-div">
+        <div class="col-lg-6">
+            <h1 class="header-text">Generate custom color palettes from images</h1>
+        </div>
+        <div class="col-lg-6 header-img-div">
+            <img src="{{ url_for('static', filename='Doughnut.jpg') }}" alt="Sample image" class="header-img">
+        </div>
+        <div class="col-lg-1">
+            <a class="btn btn-primary btn-lg header-cta" href="{{ url_for('recieve_image') }}">Leggo!</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

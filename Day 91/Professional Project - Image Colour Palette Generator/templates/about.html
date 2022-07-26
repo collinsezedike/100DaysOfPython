@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}About{% endblock %}
+{% block navlink1 %}<a class="nav-link" href="{{ url_for('home')}}">Home</a>{% endblock navlink1 %}
+{% block content %}
+<div class="container about-container">
+    <div class="about-div">
+        
+        <div class="about-text">
+            <p>Built with Flask by Collins Ezedike-egwom<br><br>
+                This website is one of my Professional projects for my #100DaysOfCode.</p>
+        </div>
+        <a href="https://twitter.com/collinsezedike" target="blank" class="social-icon">
+        <i class="fa-brands fa-twitter social-icon"></i>
+        </a>
+        <a href="https://github.com/collinsezedike" target="blank" class="social-icon">
+            <i class="fa-brands fa-github social-icon"></i>
+        </a>
+        <a href="https://instagram.com/collinsezedike" target="blank" class="social-icon">
+            <i class="fa-brands fa-instagram social-icon"></i>
+        </a>
+
+    </div>
+</div>
+
+{% endblock %}
