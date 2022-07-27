@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container-fluid">
+    <div class="row page-content">
+        {% if response: %}
+        <div class="col-lg-12 response-head">
+        <h3 class="response-header-word">
+            {{ response["word"] }} - /{{ response["pronunciation"] }}/
+        </h3>
+        </div>
+        {% for definition in response["definitions"]: %}
+        <div class="col-lg-4 response-div">
+
+            <h3 class="response-part-of-speech">{{ definition.type }}</h3>
+            <p class="response-definition">{{ definition.definition.capitalize() }}</p>
+            {% if definition.example: %}
+            <p class="response-example">{{ definition.example.capitalize() }}</p>
+            {% endif %}
+        </div>
+        {% endfor %}
+        <a class="return-link" href="{{ url_for('home') }}"><i class="fa-solid fa-circle-arrow-left"></i> Return.</a>
+        {% elif is_invalid[0]: %}
+        <div class="col-lg-12 bad-response-div">
+            <h2 class="bad-response-header">No definition found for "{{is_invalid[1]}}"</h2>
+            <p>Check if you spelt it correctly.</p>
+            <a class="return-link" href="{{ url_for('home') }}"><i class="fa-solid fa-circle-arrow-left"></i> Return.</a>
+        </div>
+        {% else: %}
+        <div class="col-lg-12 bad-response-div">
+            <h2 class="bad-response-header">Something went wrong!</h2>
+            <p>You definitely did not do anything wrong. Please try again.</p>
+            <a class="return-link" href="{{ url_for('home') }}"><i class="fa-solid fa-circle-arrow-left"></i> Return.</a>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,75 @@
+body {
+    text-align: center;    
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+}
+a {
+    text-decoration: none;
+}
+
+footer a {
+    color: inherit;
+}
+footer a:hover {
+    color: #0d6efd;
+}
+footer p {
+    margin: 6rem  auto 2rem;
+    font-size: 0.9rem;
+}
+
+
+
+.navbar {
+    margin: 3rem auto 2rem;
+    padding: 2rem;
+}
+.navbar-brand {
+    font-weight: 900 !important;
+}
+
+
+.page-content {
+    margin: 10% auto 0.5%;
+    width: 90%;
+}
+
+
+.search-div {
+    margin: auto;
+}
+.search-header-text {
+    font-size: 2rem;
+}
+.btn {
+    margin-top: 1rem;
+}
+
+
+.response-head, .response-div {
+    font-family: 'Playfair Display', serif;
+    text-align: left;
+    margin-bottom: 3rem;
+}
+.response-header-word {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+}
+.response-part-of-speech {
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #888;
+}
+.response-definition {
+    font-size: 1.3rem;
+}
+.response-example {
+    font-size: 1.2rem;
+    color: #888;
+}
+.bad-response-div {
+    margin: 2rem auto;
+}
+.bad-response-header {
+    font-size: 2rem;
+}
