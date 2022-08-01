@@ -1,0 +1,20 @@
+{% import "bootstrap/form.html" as wtf %}
+{% extends "base.html" %}
+{% block title %}xyz.store | Sign In {% endblock %}
+{% block content %}
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for message in messages %}
+            <i style="color:rgb(209, 0, 0); font-family: 'Lato', sans-serif;">{{ message }}</i>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+<div class="form-div">
+    {{ wtf.render_form(form, novalidate=True, method="post", button_map={"class": "primary-button"})}}
+    {% if register_form: %}
+    <i>Already have an account? <a href="{{ url_for('login') }}" id="login-link">Sign in</a></i>
+    {% else: %}
+    <i>Don't have an account? <a href="{{ url_for('register') }}" id="register-link">Create one now!</a></i>  
+    {% endif %}
+</div>
+{% endblock %}

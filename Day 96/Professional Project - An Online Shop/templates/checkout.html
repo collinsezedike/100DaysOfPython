@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}xyz.store | Checkout {% endblock %}
+{% block content %}
+<div class="col-lg-8 checkout-construction-div">
+  <img class="checkout-construction-div-illustration" src="https://img.freepik.com/free-vector/bricklayer-concept-illustration_114360-6329.jpg?w=740&t=st=1659307853~exp=1659308453~hmac=de2dd47cf8e98a357e5d36d0ae0883c132d0dacf7978518e8cdded5d5586223e" alt="Site in development image" />
+  <h2>The payment processing gateway in under development.</h2>
+  <p>Checkout and payment is been refactored to provide you with a seamless shopping experience.</p>
+  <p>Nothing happens to your cart. No need to do anything. Everything will be setup properly soonest.</p>
+  <p>Sorry for any inconvinience. Meanwhile...</p>
+  <a href="{{ url_for('home') }}">Keep Shopping <i class="fa-solid fa-cart-shopping"></i></a>
+</div>
+{% endblock %}

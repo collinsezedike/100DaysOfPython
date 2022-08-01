@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block title %}xyz.store | Cart {% endblock %}
+{% block content %}
+<div class="container">
+    <div class="row cart-item">
+        {% if cart: %}
+        {% for item in cart: %}
+        <div class="col-lg-12">
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row no-gutters">
+                    <div id="x-container">
+                        <a href="{{ url_for('remove_from_cart', cart_item_id=item.id) }}"><i class="fa-solid fa-xmark" id="x"></i></a>
+                    </div>
+                    <div class="col-md-4 cart-item-img-div">
+                        <img class="cart-item-img" src="{{ item.img_url }}" alt="Product image" />
+                    </div>
+                    <div class="col-md-8 cart-item-text-div">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ item.name }}</h5>
+                            <p class="card-text">${{ item.price }}</p>
+                            <a href="{{ url_for('decrease_cart_item_quantity', cart_item_id=item.id) }}"><i class="fa-solid fa-minus"></i></a> <i class="fa-solid fa-{{ item.quantity }} cart-item-qty"></i> <a href="{{ url_for('increase_cart_item_quantity', cart_item_id=item.id) }}"><i class="fa-solid fa-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        <a class="primary-button" href="{{ url_for('checkout') }}">Check out</i></a>
+        {% else: %}          
+        <div class="col-lg-8 empty-cart-div">
+            <img class="empty-cart-div-illustration" src="https://img.freepik.com/free-vector/empty-concept-illustration_114360-1188.jpg?t=st=1656713016~exp=1656713616~hmac=d06f255869b3c1bc784cad9667472d89d9bc6f776131c9cf7ec45ec0951dcc8c&w=740" alt="Empty cart image" />
+            <h2>There's nothing here</h2>
+            <a href="{{ url_for('home') }}">Start Shopping <i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+        {% endif %}
+
+</div>
+{% endblock %}        

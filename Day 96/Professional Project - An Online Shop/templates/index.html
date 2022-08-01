@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}xyz.store | Home {% endblock %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        {% for product in products: %}
+        <div class="col-lg-4 col-md-6">
+            <div class="product-card card">
+                <a href="{{ url_for('show_product', product_id=product.id) }}">
+                    <img class="product-card-image card-img-top" src="{{ product.img_url }}" alt="product image" />
+                    <div class="card-body">
+                        <h3 class="card-text">{{ product.name }}</h3>
+                        <p class="card-text">${{ product.price }}</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+  </div>
+{% endblock %}

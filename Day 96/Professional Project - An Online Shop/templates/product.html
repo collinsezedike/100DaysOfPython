@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}xyz.store | Product {% endblock %}
+{% block content %}
+<div class="container">
+    <div class="row product-pg-details">
+        <div class="col-lg-6 product-pg-img-div">
+            <img class="product-pg-img" src="{{ product.img_url }}" alt="Product image" />
+        </div>
+        <div class="col-lg-6 product-pg-text-div">
+            <h3>{{ product.name }}</h3>
+            <h4>${{ product.price }}</h4>
+            <p>{{ product.description }}<p><br>
+            <a class="primary-button" href="{{ url_for('add_to_cart', product_id=product.id) }}">Add to cart <i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+    </div>
+</div>
+{% endblock %}        
