@@ -51,4 +51,5 @@ def main():
 
 
 main()
-print("\nIf you enjoyed the game, follow me on twitter to see the other amazing stuff I am building.\n")
+print("\nThanks for playing. Hope you enjoyed the game.")
+print("If you enjoyed the game, follow me on twitter @collinsezedike to see the other amazing stuff I am building.\n")
